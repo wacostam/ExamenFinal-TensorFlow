@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4EEEE"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="410dp"
+        android:layout_height="31dp"
+        android:layout_margin="10dp"
+        android:background="#E48DAB"
+        android:text="Google ML Kit"
+        android:textAlignment="center"
+        android:textColor="#F4EFEF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <Button
+        android:id="@+id/btGallery"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:backgroundTint="#E48DAB"
+        android:onClick="abrirGaleria"
+        android:text="Galería"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btCamera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:rippleColor="#0ADC75"
+        app:strokeColor="#1E19D1" />
+
+    <Button
+        android:id="@+id/btCamera"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:backgroundTint="#E48DAB"
+        android:onClick="onCameraButtonClick"
+        android:text="Cámara"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btGallery"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="378dp"
+        android:layout_height="380dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtresults"
+        app:layout_constraintDimensionRatio="H,4:5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btGallery"
+        tools:srcCompat="@drawable/ic_action_name" />
+
+    <ScrollView
+        android:layout_width="388dp"
+        android:layout_height="173dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view">
+
+        <TextView
+            android:id="@+id/txtresults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:text="Resultados:"
+            android:textColor="#000000" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btPersonalizado"
+        android:layout_width="393dp"
+        android:layout_height="49dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#E48DAB"
+        android:onClick="PersonalizedModel"
+        android:text="TENSOR FLOW"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
